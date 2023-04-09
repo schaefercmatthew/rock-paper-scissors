@@ -123,7 +123,7 @@ body::-webkit-scrollbar{
  
 
   .rock{
-    background: url("Pictures/rock.webp");
+    background: url("pictures/rock.webp");
     background-size: contain;
     background-repeat: no-repeat;
     width: 300px;
@@ -133,7 +133,7 @@ body::-webkit-scrollbar{
   }
 
   .paper{
-    background-image: url("Pictures/paper.png");
+    background-image: url("pictures/paper.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 300px;
@@ -144,7 +144,7 @@ body::-webkit-scrollbar{
   }
 
   .scissors{
-    background-image: url("Pictures/scissors.png");
+    background-image: url("pictures/scissors.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 300px;

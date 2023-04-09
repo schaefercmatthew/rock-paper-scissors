@@ -1,83 +1,59 @@
-function playRound() {
-  let results = [];
+let results = [];
 
-  function RPS(computerSelection, playerSelection) {
-    if (playerSelection == "R" && computerSelection == "P") {
-      results.push("You lose! Paper beats Rock");
-    }
-    if (playerSelection == "R" && computerSelection == "R") {
-      results.push("A cats game! You both picked Rock");
-    }
-    if (playerSelection == "R" && computerSelection == "S") {
-      results.push("You win! Rock beats scissors");
-    }
-    if (playerSelection == "P" && computerSelection == "P") {
-      results.push("A cats game! You both picked paper");
-    }
-    if (playerSelection == "P" && computerSelection == "R") {
-      results.push("You win! Paper beats Rock");
-    }
-    if (playerSelection == "P" && computerSelection == "S") {
-      results.push("You lose! Scissors beats paper");
-    }
-    if (playerSelection == "S" && computerSelection == "P") {
-      results.push("You win! Scissors beats paper");
-    }
-    if (playerSelection == "S" && computerSelection == "R") {
-      results.push("You lose! Rock beats scissors");
-    }
-    if (playerSelection == "S" && computerSelection == "S") {
-      results.push("A cats game! You both picked scissors");
-    }
+//main function to actually play
+function RPS(computerSelection, playerSelection) {
+  switch (playerSelection + computerSelection) {
+    case "RP":
+    case "SR":
+    case "PS":
+      results.push("You win!");
+      break;
+    case "RR":
+    case "PP":
+    case "SS":
+      results.push("A cats game!");
+      break;
+    default:
+      results.push("You lose!");
+      break;
   }
+}
 
-  function getComputerChoice() {
-    let x = Math.floor(Math.random() * 3) + 1;
-    if (x == 1) {
-      return "R";
-    } else if (x == 2) {
-      return "P";
-    } else if (x == 3) {
-      return "S";
-    }
+//computers choice
+function getComputerChoice() {
+  let x = Math.floor(Math.random() * 3) + 1;
+  if (x == 1) {
+    return "R";
+  } else if (x == 2) {
+    return "P";
+  } else if (x == 3) {
+    return "S";
   }
+}
 
-  computerSelection = getComputerChoice();
+const rockButton = document.querySelector("#rockButton");
+const scissorsButton = document.querySelector("#scissorsButton");
+const paperButton = document.querySelector("#paperButton");
 
-  let usersChoice = prompt("Choose Rock, Paper, or Scissors:");
-  let playerSelection = usersChoice.charAt(0).toUpperCase();
+rockButton.addEventListener("click", () => {
+  let computerSelection = getComputerChoice();
+  let playerSelection = "R";
+  let result = "You picked Rock! " + results[results.length - 1];
+  document.getElementById("dispMessage").textContent = result;
+});
 
+scissorsButton.addEventListener("click", () => {
+  let computerSelection = getComputerChoice();
+  let playerSelection = "S";
   RPS(computerSelection, playerSelection);
+  let result = "You picked Scissors! " + results[results.length - 1];
+  document.getElementById("dispMessage").textContent = result;
+});
 
-  for (let i = 0; i < results.length; i++) {
-    console.log(results[i]);
-  }
-
-  return results;
-}
-
-let userWins = 0;
-let computerWins = 0;
-let ties = 0;
-
-for (let i = 0; i < 5; i++) {
-  let result = playRound();
-  if (result[0].includes("win")) {
-    userWins++;
-  } else if (result[0].includes("lose")) {
-    computerWins++;
-  } else {
-    ties++;
-  }
-}
-
-console.log(
-  "User Wins:" +
-    userWins +
-    `
-Computer Wins:` +
-    computerWins +
-    `
-Ties:` +
-    ties
-);
+paperButton.addEventListener("click", () => {
+  let computerSelection = getComputerChoice();
+  let playerSelection = "P";
+  RPS(computerSelection, playerSelection);
+  let result = "You picked Paper! " + results[results.length - 1];
+  document.getElementById("dispMessage").textContent = result;
+});

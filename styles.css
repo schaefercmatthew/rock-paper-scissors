@@ -134,7 +134,7 @@ body::-webkit-scrollbar{
   }
 
   .paper{
-    background-image: url('https://github.com/schaefercmatthew/rock-paper-scissors/blob/main/Pictures/paper.png?raw=true');
+    background-image: url("https://github.com/schaefercmatthew/rock-paper-scissors/blob/main/Pictures/paper.png?raw=true");
     background-size: contain;
     background-repeat: no-repeat;
     width: 300px;

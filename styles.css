@@ -30,7 +30,8 @@ body::-webkit-scrollbar{
 
   
   section {
-    height: 150vh; 
+    height: 150dvh; 
+    height: 150vh;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover; 

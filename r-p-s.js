@@ -38,6 +38,7 @@ const paperButton = document.querySelector("#paperButton");
 rockButton.addEventListener("click", () => {
   let computerSelection = getComputerChoice();
   let playerSelection = "R";
+  RPS(computerSelection, playerSelection);
   let result = "You picked Rock! " + results[results.length - 1];
   document.getElementById("dispMessage").textContent = result;
 });

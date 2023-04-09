@@ -80,3 +80,13 @@ paperButton.addEventListener("click", () => {
     document.getElementById("dispMessage").textContent = result;
   }, 1000); // wait for 1 second before displaying new message
 });
+
+// get the section elements
+const section1 = document.querySelector("#section1");
+const section2 = document.querySelector("#section2");
+const section3 = document.querySelector("#section3");
+
+// set the initial background images
+section1.style.backgroundImage = 'url("/Pictures/Mountain.jpg")';
+section2.style.backgroundImage = 'url("/Pictures/mountain2.jpg")';
+section3.style.backgroundImage = 'url("/Pictures/mountain3.jpg")';

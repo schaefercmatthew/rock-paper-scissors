@@ -1,29 +1,49 @@
-body {
-    overflow-y: scroll;
+body::-webkit-scrollbar{
+    display: none;
   }
   
   #container {
     height: 100%; /* make the container take up the full height of the screen */
     overflow-y: scroll; /* allow the container to be scrollable */
+
   }
+ 
+  .scrollFade {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .scrollFade--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .scrollFade--visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .scrollFade--animate {
+    transition: opacity .8s ease-in-out;
+  }
+
   
   section {
-    height: 100vh; /* make each section take up the full height of the screen */
-    background-position: center; /* center the background image */
-    background-repeat: no-repeat; /* prevent the background image from repeating */
-    background-size: cover; /* make the background image cover the entire section */
+    height: 150vh; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    margin-bottom: 1000px;
+    display: flexbox;
   }
   
   #section1 {
-    background-image: url('image1.jpg');
+    background-image: url('/Pictures/Mountain.jpg');
   }
   
   #section2 {
-    background-image: url('image2.jpg');
+    background-image: url('/Pictures/mountain2.jpg');
   }
   
   #section3 {
-    background-image: url('image3.jpg');
+    background-image: url('/Pictures/mountain3.jpg');
   }
   
   .text-container {

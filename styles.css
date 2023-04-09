@@ -40,23 +40,23 @@ body::-webkit-scrollbar{
   }
   
   #section1 {
-    background-image: url('/citypics/city1.png');
+    background-image: url('citypics/city1.png');
   }
   
   #section2 {
-    background-image: url('/citypics/city2.png');
+    background-image: url('citypics/city2.png');
   }
   
   #section3 {
-    background-image: url('/citypics/city3.png');
+    background-image: url('citypics/city3.png');
   }
 
   #section4 {
-    background-image: url('/citypics/city4.png');
+    background-image: url('citypics/city4.png');
   }
 
   #section5 {
-    background-image: url('/citypics/city5.jpg');
+    background-image: url('citypics/city5.jpg');
   }
 
  
@@ -123,7 +123,7 @@ body::-webkit-scrollbar{
  
 
   .rock{
-    background: url("/Pictures/rock.webp");
+    background: url("Pictures/rock.webp");
     background-size: contain;
     background-repeat: no-repeat;
     width: 300px;
@@ -133,7 +133,7 @@ body::-webkit-scrollbar{
   }
 
   .paper{
-    background-image: url("/Pictures/paper.png");
+    background-image: url("Pictures/paper.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 300px;
@@ -144,7 +144,7 @@ body::-webkit-scrollbar{
   }
 
   .scissors{
-    background-image: url("/Pictures/scissors.png");
+    background-image: url("Pictures/scissors.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 300px;

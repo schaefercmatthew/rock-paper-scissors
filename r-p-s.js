@@ -134,11 +134,11 @@ const section4 = document.querySelector("#section4");
 const section5 = document.querySelector("#section5");
 
 // set the initial background images
-section1.style.backgroundImage = 'url("/citypics/city1.png")';
-section2.style.backgroundImage = 'url("/citypics/city2.png")';
-section3.style.backgroundImage = 'url("/citypics/city3.png")';
-section4.style.backgroundImage = 'url("/citypics/city4.png")';
-section5.style.backgroundImage = 'url("/citypics/city5.jpg")';
+section1.style.backgroundImage = 'url("citypics/city1.png")';
+section2.style.backgroundImage = 'url("citypics/city2.png")';
+section3.style.backgroundImage = 'url("citypics/city3.png")';
+section4.style.backgroundImage = 'url("citypics/city4.png")';
+section5.style.backgroundImage = 'url("citypics/city5.jpg")';
 
 // show the initial score
 updateScore();

@@ -1,0 +1,13 @@
+.rock, .scissors, .paper {height: 200px;
+align-items: center;}
+
+.parentOfButtons{ 
+    display: flex
+    ;
+    justify-content: center;
+}
+
+.message {
+    text-align: center;
+    font-size: 10vh;
+}

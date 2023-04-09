@@ -2,19 +2,29 @@ let results = [];
 
 //main function to actually play
 function RPS(computerSelection, playerSelection) {
-  switch (playerSelection + computerSelection) {
+  switch (computerSelection + playerSelection) {
     case "RP":
+      results.push("Paper covers Rock: You win!");
+      break;
     case "SR":
+      results.push("Rock crushes Scissors: You win!");
+      break;
     case "PS":
-      results.push("You win!");
+      results.push("Scissors cuts Paper: You win!");
       break;
     case "RR":
     case "PP":
     case "SS":
-      results.push("A cats game!");
+      results.push("So did the computer: A cats game!");
       break;
-    default:
-      results.push("You lose!");
+    case "PR":
+      results.push("Paper covers Rock: You lose!");
+      break;
+    case "RS":
+      results.push("Rock crushes Scissors: You lose!");
+      break;
+    case "SP":
+      results.push("Scissors cuts Paper: You lose!");
       break;
   }
 }
@@ -36,25 +46,37 @@ const scissorsButton = document.querySelector("#scissorsButton");
 const paperButton = document.querySelector("#paperButton");
 
 rockButton.addEventListener("click", () => {
-  let computerSelection = getComputerChoice();
-  let playerSelection = "R";
-  RPS(computerSelection, playerSelection);
-  let result = "You picked Rock! " + results[results.length - 1];
-  document.getElementById("dispMessage").textContent = result;
+  let displayMessage = document.getElementById("dispMessage");
+  displayMessage.textContent = ""; // clear old message
+  setTimeout(() => {
+    let computerSelection = getComputerChoice();
+    let playerSelection = "R";
+    RPS(computerSelection, playerSelection);
+    let result = "You picked Rock! " + results[results.length - 1];
+    displayMessage.textContent = result;
+  }, 1000); // wait for 1 second before displaying new message
 });
 
 scissorsButton.addEventListener("click", () => {
-  let computerSelection = getComputerChoice();
-  let playerSelection = "S";
-  RPS(computerSelection, playerSelection);
-  let result = "You picked Scissors! " + results[results.length - 1];
-  document.getElementById("dispMessage").textContent = result;
+  let displayMessage = document.getElementById("dispMessage");
+  displayMessage.textContent = ""; // clear old message
+  setTimeout(() => {
+    let computerSelection = getComputerChoice();
+    let playerSelection = "S";
+    RPS(computerSelection, playerSelection);
+    let result = "You picked Scissors! " + results[results.length - 1];
+    document.getElementById("dispMessage").textContent = result;
+  }, 1000); // wait for 1 second before displaying new message
 });
 
 paperButton.addEventListener("click", () => {
-  let computerSelection = getComputerChoice();
-  let playerSelection = "P";
-  RPS(computerSelection, playerSelection);
-  let result = "You picked Paper! " + results[results.length - 1];
-  document.getElementById("dispMessage").textContent = result;
+  let displayMessage = document.getElementById("dispMessage");
+  displayMessage.textContent = ""; // clear old message
+  setTimeout(() => {
+    let computerSelection = getComputerChoice();
+    let playerSelection = "P";
+    RPS(computerSelection, playerSelection);
+    let result = "You picked Paper! " + results[results.length - 1];
+    document.getElementById("dispMessage").textContent = result;
+  }, 1000); // wait for 1 second before displaying new message
 });

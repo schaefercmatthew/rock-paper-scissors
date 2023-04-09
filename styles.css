@@ -1,13 +1,75 @@
-.rock, .scissors, .paper {height: 200px;
-align-items: center;}
+body {
+    overflow-y: scroll;
+  }
+  
+  #container {
+    height: 100%; /* make the container take up the full height of the screen */
+    overflow-y: scroll; /* allow the container to be scrollable */
+  }
+  
+  section {
+    height: 100vh; /* make each section take up the full height of the screen */
+    background-position: center; /* center the background image */
+    background-repeat: no-repeat; /* prevent the background image from repeating */
+    background-size: cover; /* make the background image cover the entire section */
+  }
+  
+  #section1 {
+    background-image: url('image1.jpg');
+  }
+  
+  #section2 {
+    background-image: url('image2.jpg');
+  }
+  
+  #section3 {
+    background-image: url('image3.jpg');
+  }
+  
+  .text-container {
+    position: absolute; /* position the text on top of the background image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* center the text vertically and horizontally */
+    color: white; /* set the text color */
+    text-align: center; /* center the text horizontally */
+    max-width: 800px; /* set a maximum width for the text container */
+    padding: 20px; /* add some padding to the text container */
+  }
+  
+  h1 {
+    font-size: 4rem; /* set the font size for the heading */
+  }
+  
+  p {
+    font-size: 2rem; /* set the font size for the paragraph */
+  }
+  
 
-.parentOfButtons{ 
-    display: flex
-    ;
+.rock, .scissors, .paper {
+    height: 200px;
+    align-items: center;
+    display: flex;
     justify-content: center;
-}
-
-.message {
+  }
+  
+  .parentOfButtons {
+    display: flex;
+    justify-content: space-between
+  }
+  
+  .message {
+    display: block;
     text-align: center;
-    font-size: 10vh;
-}
+    font-size: 5vw;
+  }
+  
+  .loading-message {
+    display: none;
+    font-style: italic;
+  }
+
+ /* #rockButton, #scissorsButton, #paperButton {
+    display: none;
+  }
+  */

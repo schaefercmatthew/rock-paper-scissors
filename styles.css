@@ -31,7 +31,9 @@ body::-webkit-scrollbar{
     background-repeat: no-repeat; 
     background-size: cover; 
     margin-bottom: 300px;
-    display: flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
   #section1 {
@@ -47,12 +49,8 @@ body::-webkit-scrollbar{
   }
   
   .text-container {
-    position: absolute; /* position the text on top of the background image */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* center the text vertically and horizontally */
+    position:absolute;
     color: white; /* set the text color */
-    text-align: center; /* center the text horizontally */
     max-width: 800px; /* set a maximum width for the text container */
     padding: 20px; /* add some padding to the text container */
   }

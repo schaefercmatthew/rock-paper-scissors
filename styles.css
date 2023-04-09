@@ -7,9 +7,8 @@ body::-webkit-scrollbar{
   }
   
   #container {
-    height: 100%; /* make the container take up the full height of the screen */
-    overflow-y: scroll; /* allow the container to be scrollable */
-
+    height: 100%; 
+    overflow-y: scroll;
   }
  
   .scrollFade {
@@ -110,6 +109,7 @@ body::-webkit-scrollbar{
     background-color: aliceblue;
     height: 150vh;
     display: block;
+    
   }
 
   
@@ -124,7 +124,7 @@ body::-webkit-scrollbar{
  
 
   .rock{
-    background: url("pictures/rock.webp");
+    background: url("https://raw.githubusercontent.com/schaefercmatthew/rock-paper-scissors/main/Pictures/rock.webp");
     background-size: contain;
     background-repeat: no-repeat;
     width: 300px;
@@ -134,7 +134,7 @@ body::-webkit-scrollbar{
   }
 
   .paper{
-    background-image: url("pictures/paper.png");
+    background-image: url('https://github.com/schaefercmatthew/rock-paper-scissors/blob/main/Pictures/paper.png?raw=true');
     background-size: contain;
     background-repeat: no-repeat;
     width: 300px;
@@ -145,7 +145,7 @@ body::-webkit-scrollbar{
   }
 
   .scissors{
-    background-image: url("pictures/scissors.png");
+    background-image: url("https://github.com/schaefercmatthew/rock-paper-scissors/blob/main/Pictures/scissors.png?raw=true");
     background-size: contain;
     background-repeat: no-repeat;
     width: 300px;

@@ -2,7 +2,7 @@ let results = [];
 
 //main function to actually play
 function RPS(computerSelection, playerSelection) {
-  switch (computerSelection + playerSelection) {
+  switch (computerSelection.concat(playerSelection)) {
     case "RP":
       results.push("Paper covers Rock: You win!");
       break;

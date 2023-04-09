@@ -21,7 +21,7 @@ body::-webkit-scrollbar{
     pointer-events: all;
   }
   .scrollFade--animate {
-    transition: opacity .8s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
   }
 
   
@@ -30,7 +30,7 @@ body::-webkit-scrollbar{
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover; 
-    margin-bottom: 1000px;
+    margin-bottom: 300px;
     display: flexbox;
   }
   
